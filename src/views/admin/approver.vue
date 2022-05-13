@@ -86,6 +86,7 @@ export default {
   data() {
     return {
       mockData: null, // 可选择诸如 $route.param，Ajax获取数据等方式自行注入
+      nodeDate:null,
       activeStep: "basicSetting", // 激活的步骤面板
       steps: [
         { label: "基础设置", key: "basicSetting" },
@@ -109,12 +110,16 @@ export default {
     }
   },
   mounted() {
-    GET_MOCK_CONF().then(data => this.mockData = data);
+    GET_MOCK_CONF().then(data => {
+      //delete data.processData
+      data.processData = this.nodeDate
+      this.mockData = data
+    });
 
     getTestData().then(c=> {
       console.log('11111**************111');
       console.log('--api----data===',JSON.stringify(c.data.length));
-      FormatDisplayUtils.depthConverterToTree(c.data);
+      this.nodeDate = FormatDisplayUtils.depthConverterToTree(c.data); 
     });
   },
   methods: {
@@ -127,9 +132,7 @@ export default {
       // advancedSetting返回的就是值
       const p1 = getCmpData('basicSetting') 
       const p2 = getCmpData('formDesign')
-      const p3 = getCmpData('processDesign')
-
-
+      const p3 = getCmpData('processDesign') 
       Promise.all([p1, p2, p3])
       .then(res => {
        console.log('配置数据p2', JSON.stringify(res[2].formData));

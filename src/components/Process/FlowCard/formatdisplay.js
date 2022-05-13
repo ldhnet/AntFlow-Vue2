@@ -3,10 +3,7 @@ const isEmpty = data => data === null || data === undefined || data === ''
 const isEmptyArray = data => Array.isArray( data ) ? data.length === 0 : true
 
 export class FormatDisplayUtils {
-    static getNodeType ( node ) { 
-        
-        console.log('===node.nodeType=======',JSON.stringify(node))
-
+    static getNodeType ( node ) {  
         if(node.nodeType === 1)
         {
             return 'start'
@@ -41,68 +38,47 @@ export class FormatDisplayUtils {
             res.nodeId = nodeData.nodeId
             res.prevId = nodeData.nodeFrom?nodeData.nodeFrom:'' 
             res.nodeFrom = [res.prevId]
-            res.nodeTo = nodeData.nodeTo
+            res.nodeTo = nodeData.nodeTo? nodeData.nodeTo:[]
             return res
-          }
-      /**
-   * 创建Node Tree Data 数据
-   * @param { String } type - 节点类型
-   * @param { Object } treeData - 节点数据
-   * @returns Array
-   */ 
-    static depthChildNodeToTree (nodeTree,nodeData) {
-        //console.log('treeData====',JSON.stringify(nodeData)); 
-        if(isEmpty(nodeTree) || isEmptyArray(nodeData)) return nodeTree
-        
-        let currentNode=this.createNodeDisplay(nodeTree)
-
-        let nodeTo=currentNode.nodeTo
-        if(isEmptyArray(nodeTo)) return currentNode
-        if(currentNode.type != 'gateway')
-        {
-            let childNode = nodeData.filter(m=> { return m.nodeId == nodeTo[0] }).shift()
-
-            currentNode.children=this.createNodeDisplay(childNode) 
-           
-            this.depthChildNodeToTree(currentNode.children,nodeData.filter(m=> { return m.nodeId != nodeTo[0] }))
         }
-        else
-        {
-            currentNode.conditionNodes=[]
-            for(let id in nodeTo)
-            {
-                let conNode = nodeData.filter(m=> { return m.nodeId == id }).shift()     
-                if(isEmpty(conNode)) continue
-                nodeData = nodeData.filter(m=> { return m.nodeId != id })
-                if(conNode.nodeType == 2 || conNode.nodeType == 4)
-                {
-                    currentNode.children = this.createNodeDisplay(conNode)
-                } 
-                else if(conNode.nodeType == 3)
-                { 
-                    currentNode.conditionNodes.push(this.createNodeDisplay(conNode)) 
-                } 
-            }
-            for(let childNode in currentNode.conditionNodes)
-            {
-                this.depthChildNodeToTree(childNode,nodeData)
-            }
-        } 
-        return currentNode
-    }
-  
     static depthConverterToTree(parmData)
     {
         if(isEmptyArray(parmData)) return
-        let startNode = parmData.filter(m=> { return m.nodeType == 1 }).shift()
-
-        let nodeData = parmData.filter(m=> { return m.nodeType != 1 })
+        let nodeData =[],nodesGroup={},startNode={}
+        for(let t of parmData){
+           let node_t=this.createNodeDisplay(t)
+           nodeData.push(node_t)
+           if(nodesGroup.hasOwnProperty(node_t.nodeFrom)){
+               nodesGroup[node_t.nodeFrom].push(node_t)
+           }else{
+            nodesGroup[node_t.nodeFrom]=[node_t]
+           }
+        } 
+        for (let processNode of nodeData) {
+            if ("start" == processNode.type) {
+                startNode = processNode;
+            }
+            processNode.conditionNodes=[]
+            let currNodeId = processNode.nodeId;
+            if (nodesGroup.hasOwnProperty(currNodeId)) {
+                let itemNodes = nodesGroup[currNodeId]; 
+                for (let itemNode of itemNodes) {
+                    if ("condition" == itemNode.type) {
+                        processNode.conditionNodes.push(itemNode);
+                    } else {
+                        processNode.childNode = itemNode;
+                    }
+                }
+            }
+        }
  
-        let resultNode = this.depthChildNodeToTree(startNode,nodeData)
+        
+        console.log('startNode====',JSON.stringify(startNode)); 
+        // let resultNode = this.depthChildNodeToTree(startNode,nodeData)
 
-        console.log('resultNode====',JSON.stringify(resultNode)); 
-
+       return startNode
     }
+
    // static depthConditionNodeToTree (nodeData) {
     //     console.log('treeData====',JSON.stringify(nodeData)); 
        
