@@ -68,6 +68,7 @@ import AdvancedSetting from '@/components/AdvancedSetting'
 import { GET_MOCK_CONF } from '../../api'
 import { FormatUtils } from '@/components/Process/FlowCard/formatdata.js'
 import { getTestData } from '@/api/flowpreviewapi.js'
+import { FormatDisplayUtils } from '@/components/Process/FlowCard/formatdisplay.js'
 const beforeUnload = function (e) {
   var confirmationMessage = '离开网站可能会丢失您编辑得内容';
   (e || window.event).returnValue = confirmationMessage;     // Gecko and Trident
@@ -112,7 +113,8 @@ export default {
 
     getTestData().then(c=> {
       console.log('11111**************111');
-      console.log('--api----data===',JSON.stringify(c.data));
+      console.log('--api----data===',JSON.stringify(c.data.length));
+      FormatDisplayUtils.depthConverterToTree(c.data);
     });
   },
   methods: {

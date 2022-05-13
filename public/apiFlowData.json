@@ -1,5 +1,300 @@
 {
   "code": 200,
   "msg": "获取成功",
-  "data": {}
+  "data": [
+    {
+      "id": 281,
+      "confId": 57,
+      "nodeId": "Gb2",
+      "nodeType": 1,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "",
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "发起人",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-13 10:52:42",
+      "updateUser": "",
+      "updateTime": "2022-05-13 10:52:41",
+      "nodeTo": [
+        "HNfr81"
+      ],
+      "property": null,
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 282,
+      "confId": 57,
+      "nodeId": "HNfr81",
+      "nodeType": 2,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "Gb2",
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": null,
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-13 10:52:43",
+      "updateUser": "",
+      "updateTime": "2022-05-13 10:52:42",
+      "nodeTo": [
+        "4Ffr81",
+        "OQfr81"
+      ],
+      "property": null,
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 283,
+      "confId": 57,
+      "nodeId": "5UMcT",
+      "nodeType": 4,
+      "nodeProperty": 5,
+      "nodePropertyName": "指定人员",
+      "nodeFrom": "HNfr81",
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "张三审批",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-13 10:52:43",
+      "updateUser": "",
+      "updateTime": "2022-05-13 10:52:42",
+      "nodeTo": null,
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": [
+          3
+        ],
+        "emplList": [
+          {
+            "id": 3,
+            "name": "测试人员3"
+          }
+        ],
+        "signType": 1,
+        "conditionsConf": null,
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 284,
+      "confId": 57,
+      "nodeId": "4Ffr81",
+      "nodeType": 3,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "HNfr81",
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "条件1",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-13 10:52:43",
+      "updateUser": "",
+      "updateTime": "2022-05-13 10:52:42",
+      "nodeTo": [
+        "5UMcT"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": null,
+        "emplList": null,
+        "signType": null,
+        "conditionsConf": {
+          "conditionParamTypes": [
+            4
+          ],
+          "isDefault": 0,
+          "sort": 0,
+          "templateMarkList": null,
+          "jobLevelVo": null,
+          "accountType": [
+            1
+          ],
+          "accountTypeList": [
+            {
+              "id": 0,
+              "name": "百度云"
+            },
+            {
+              "id": 1,
+              "name": "腾讯云"
+            },
+            {
+              "id": 2,
+              "name": "中通云"
+            }
+          ]
+        },
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 285,
+      "confId": 57,
+      "nodeId": "OQfr81",
+      "nodeType": 3,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "HNfr81",
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "条件2",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-13 10:52:44",
+      "updateUser": "",
+      "updateTime": "2022-05-13 10:52:43",
+      "nodeTo": [
+        "5UMcT"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": null,
+        "emplList": null,
+        "signType": null,
+        "conditionsConf": {
+          "conditionParamTypes": null,
+          "isDefault": 1,
+          "sort": 1,
+          "templateMarkList": null,
+          "jobLevelVo": null,
+          "accountType": null,
+          "accountTypeList": null
+        },
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    }
+  ]
 }
