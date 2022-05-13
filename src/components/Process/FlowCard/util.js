@@ -162,6 +162,7 @@ export class NodeUtils {
    * @param { Object  } processData - 流程图的所有节点数据
    */
   static deleteNode ( nodeData, processData, checkEmpty = true ) { 
+    console.log('nodeData===',JSON.stringify(nodeData));
     let prevNode = this.getPreviousNode( nodeData.prevId, processData )
   
     let concatChild = ( prev, delNode ) => {
@@ -208,11 +209,18 @@ export class NodeUtils {
         if(isEmpty(nodeInfo)) return 
         nodeInfo.nodeTo = delNode.nodeTo
       }            
-      //修改原子节点的 nodeFrom
-      let allConditionNode= this.getDeptNodeInfo(prev) 
-      delNode.childNode.prevId = prev.nodeId
-      delNode.childNode.nodeFrom = allConditionNode.map(c=> { return c.nodeId})
-      !isEmpty(delNode.childNode) ? prev.childNode = delNode.childNode :  delete prev.childNode 
+      if(!isEmpty(delNode.childNode))
+      {
+        //修改原子节点的 nodeFrom
+        let allConditionNode= this.getDeptNodeInfo(prev) 
+        delNode.childNode.prevId = prev.nodeId
+        delNode.childNode.nodeFrom = allConditionNode.map(c=> { return c.nodeId})
+        prev.childNode = delNode.childNode 
+      } 
+      else
+      {
+        delete prev.childNode
+      }
        console.log('delete=====processData====',JSON.stringify(processData));
     }
     

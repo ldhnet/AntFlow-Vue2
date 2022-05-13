@@ -67,6 +67,7 @@ import BasicSetting from '@/components/BasicSetting'
 import AdvancedSetting from '@/components/AdvancedSetting'
 import { GET_MOCK_CONF } from '../../api'
 import { FormatUtils } from '@/components/Process/FlowCard/formatdata.js'
+import { getTestData } from '@/api/flowpreviewapi.js'
 const beforeUnload = function (e) {
   var confirmationMessage = '离开网站可能会丢失您编辑得内容';
   (e || window.event).returnValue = confirmationMessage;     // Gecko and Trident
@@ -108,6 +109,11 @@ export default {
   },
   mounted() {
     GET_MOCK_CONF().then(data => this.mockData = data);
+
+    getTestData().then(c=> {
+      console.log('11111**************111');
+      console.log('--api----data===',JSON.stringify(c.data));
+    });
   },
   methods: {
     changeSteps(item) {
