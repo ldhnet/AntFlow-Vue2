@@ -6,7 +6,7 @@ function resolve ( dir ) {
 
 module.exports = {
   runtimeCompiler: true,
-  publicPath: '/approvalflow/',
+  publicPath: '/',//antflow/
   devServer: {
     port: 8088
   },
