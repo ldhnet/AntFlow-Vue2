@@ -162,7 +162,6 @@ export class NodeUtils {
    * @param { Object  } processData - 流程图的所有节点数据
    */
   static deleteNode ( nodeData, processData, checkEmpty = true ) { 
-    console.log('nodeData===',JSON.stringify(nodeData));
     let prevNode = this.getPreviousNode( nodeData.prevId, processData )
   
     let concatChild = ( prev, delNode ) => {
@@ -175,7 +174,7 @@ export class NodeUtils {
       let allChildNode= this.getDeptNodeInfo(delGatewayNode)    
       prevForGateway.nodeTo = allChildNode[0].nodeTo //修改原父节点 的 nodeTo 数据  
       concatPrevAndChild(prevForGateway,delGatewayNode)
-      console.log('delete=====processData====',JSON.stringify(processData));
+      //console.log('delete=====processData====',JSON.stringify(processData));
     }
 
     let concatPrevAndChild = ( prev, delNode ) => {
@@ -197,7 +196,7 @@ export class NodeUtils {
         if(isEmpty(childNodeInfo)) return
         childNodeInfo.nodeFrom = childNodeInfo.nodeFrom.filter(key=> { return key != delNode.nodeId })
       }      
-      console.log('delete=====processData====',JSON.stringify(processData));
+      //console.log('delete=====processData====',JSON.stringify(processData));
     }
 
     let updateGatewayChildNode = ( prev, delNode ) =>
@@ -221,7 +220,7 @@ export class NodeUtils {
       {
         delete prev.childNode
       }
-       console.log('delete=====processData====',JSON.stringify(processData));
+      //console.log('delete=====processData====',JSON.stringify(processData));
     }
     
     if ( checkEmpty && prevNode.type === 'gateway' ) {
@@ -248,7 +247,7 @@ export class NodeUtils {
         }
     }
     concatChild( prevNode, nodeData )
-    console.log('delete=====processData====',JSON.stringify(processData));
+    //console.log('delete=====processData====',JSON.stringify(processData));
   }
   /**
    * 添加审计节点（普通节点 approver）
@@ -286,7 +285,7 @@ export class NodeUtils {
 
     data.childNode = newChildNode 
     changeChildNode(oldChildNode,newChildNode)
-    console.log('addApprovalNode====',JSON.stringify(data))
+    //console.log('addApprovalNode====',JSON.stringify(data))
   }
  
   /**

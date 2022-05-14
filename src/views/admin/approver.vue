@@ -109,17 +109,15 @@ export default {
       return `translateX(${this.steps.findIndex(t => t.key === this.activeStep) * 100}%)`
     }
   },
-  mounted() {
-    GET_MOCK_CONF().then(data => {
-      //delete data.processData
-      data.processData = this.nodeDate
-      this.mockData = data
-    });
-
+  mounted() { 
     getTestData().then(c=> {
       console.log('11111**************111');
       console.log('--api----data===',JSON.stringify(c.data.length));
       this.nodeDate = FormatDisplayUtils.depthConverterToTree(c.data); 
+    });
+    GET_MOCK_CONF().then(data => {
+      data.processData = this.nodeDate
+      this.mockData = data
     });
   },
   methods: {
