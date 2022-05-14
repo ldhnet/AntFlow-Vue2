@@ -3,13 +3,15 @@
   "msg": "获取成功",
   "data": [
     {
-      "id": 281,
-      "confId": 57,
+      "id": 292,
+      "confId": 60,
       "nodeId": "Gb2",
       "nodeType": 1,
       "nodeProperty": 1,
       "nodePropertyName": null,
       "nodeFrom": "",
+      "nodeFroms": null,
+      "prevId": [],
       "batchStatus": 0,
       "approvalStandard": 2,
       "nodeName": "发起人",
@@ -19,11 +21,11 @@
       "remark": "",
       "isDel": 0,
       "createUser": "defaultUser",
-      "createTime": "2022-05-13 10:52:42",
+      "createTime": "2022-05-14 09:15:53",
       "updateUser": "",
-      "updateTime": "2022-05-13 10:52:41",
+      "updateTime": "2022-05-14 09:15:53",
       "nodeTo": [
-        "HNfr81"
+        "G1GGE1"
       ],
       "property": null,
       "params": null,
@@ -39,13 +41,17 @@
       "formCode": "DSFZH_WMA"
     },
     {
-      "id": 282,
-      "confId": 57,
-      "nodeId": "HNfr81",
+      "id": 293,
+      "confId": 60,
+      "nodeId": "G1GGE1",
       "nodeType": 2,
       "nodeProperty": 1,
       "nodePropertyName": null,
       "nodeFrom": "Gb2",
+      "nodeFroms": "Gb2",
+      "prevId": [
+        "Gb2"
+      ],
       "batchStatus": 0,
       "approvalStandard": 2,
       "nodeName": null,
@@ -55,12 +61,12 @@
       "remark": "",
       "isDel": 0,
       "createUser": "defaultUser",
-      "createTime": "2022-05-13 10:52:43",
+      "createTime": "2022-05-14 09:15:54",
       "updateUser": "",
-      "updateTime": "2022-05-13 10:52:42",
+      "updateTime": "2022-05-14 09:15:53",
       "nodeTo": [
-        "4Ffr81",
-        "OQfr81"
+        "W2GGE1",
+        "bwIGE1"
       ],
       "property": null,
       "params": null,
@@ -76,13 +82,90 @@
       "formCode": "DSFZH_WMA"
     },
     {
-      "id": 283,
-      "confId": 57,
+      "id": 294,
+      "confId": 60,
+      "nodeId": "LuLbT",
+      "nodeType": 4,
+      "nodeProperty": 5,
+      "nodePropertyName": "指定人员",
+      "nodeFrom": "G1GGE1",
+      "nodeFroms": "W2GGE1,bwIGE1",
+      "prevId": [
+        "W2GGE1",
+        "bwIGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "李四审批",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:54",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:54",
+      "nodeTo": [
+        "5UMcT"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": [
+          4
+        ],
+        "emplList": [
+          {
+            "id": 4,
+            "name": "测试人员4"
+          }
+        ],
+        "signType": 1,
+        "conditionsConf": null,
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 295,
+      "confId": 60,
       "nodeId": "5UMcT",
       "nodeType": 4,
       "nodeProperty": 5,
       "nodePropertyName": "指定人员",
-      "nodeFrom": "HNfr81",
+      "nodeFrom": "LuLbT",
+      "nodeFroms": "LuLbT",
+      "prevId": [
+        "LuLbT"
+      ],
       "batchStatus": 0,
       "approvalStandard": 2,
       "nodeName": "张三审批",
@@ -92,9 +175,9 @@
       "remark": "",
       "isDel": 0,
       "createUser": "defaultUser",
-      "createTime": "2022-05-13 10:52:43",
+      "createTime": "2022-05-14 09:15:55",
       "updateUser": "",
-      "updateTime": "2022-05-13 10:52:42",
+      "updateTime": "2022-05-14 09:15:54",
       "nodeTo": null,
       "property": {
         "loopEndType": null,
@@ -142,13 +225,17 @@
       "formCode": "DSFZH_WMA"
     },
     {
-      "id": 284,
-      "confId": 57,
-      "nodeId": "4Ffr81",
+      "id": 296,
+      "confId": 60,
+      "nodeId": "W2GGE1",
       "nodeType": 3,
       "nodeProperty": 1,
       "nodePropertyName": null,
-      "nodeFrom": "HNfr81",
+      "nodeFrom": "G1GGE1",
+      "nodeFroms": "G1GGE1",
+      "prevId": [
+        "G1GGE1"
+      ],
       "batchStatus": 0,
       "approvalStandard": 2,
       "nodeName": "条件1",
@@ -158,11 +245,11 @@
       "remark": "",
       "isDel": 0,
       "createUser": "defaultUser",
-      "createTime": "2022-05-13 10:52:43",
+      "createTime": "2022-05-14 09:15:55",
       "updateUser": "",
-      "updateTime": "2022-05-13 10:52:42",
+      "updateTime": "2022-05-14 09:15:55",
       "nodeTo": [
-        "5UMcT"
+        "PpNGE1"
       ],
       "property": {
         "loopEndType": null,
@@ -228,13 +315,264 @@
       "formCode": "DSFZH_WMA"
     },
     {
-      "id": 285,
-      "confId": 57,
-      "nodeId": "OQfr81",
+      "id": 297,
+      "confId": 60,
+      "nodeId": "PpNGE1",
+      "nodeType": 2,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "W2GGE1",
+      "nodeFroms": "W2GGE1",
+      "prevId": [
+        "W2GGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": null,
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:56",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:55",
+      "nodeTo": [
+        "vnNGE1",
+        "InNGE1",
+        "EoSGE1"
+      ],
+      "property": null,
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 298,
+      "confId": 60,
+      "nodeId": "GegGE1",
+      "nodeType": 2,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "PpNGE1",
+      "nodeFroms": "eLXGE1,EoSGE1,InNGE1",
+      "prevId": [
+        "eLXGE1",
+        "EoSGE1",
+        "InNGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": null,
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:56",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:56",
+      "nodeTo": [
+        "zrgGE1",
+        "zmgGE1"
+      ],
+      "property": null,
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 299,
+      "confId": 60,
+      "nodeId": "zrgGE1",
       "nodeType": 3,
       "nodeProperty": 1,
       "nodePropertyName": null,
-      "nodeFrom": "HNfr81",
+      "nodeFrom": "GegGE1",
+      "nodeFroms": "GegGE1",
+      "prevId": [
+        "GegGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "条件1",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:57",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:56",
+      "nodeTo": [
+        "PunGE1"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": null,
+        "emplList": null,
+        "signType": null,
+        "conditionsConf": {
+          "conditionParamTypes": [
+            4
+          ],
+          "isDefault": 0,
+          "sort": 0,
+          "templateMarkList": null,
+          "jobLevelVo": null,
+          "accountType": [
+            1
+          ],
+          "accountTypeList": [
+            {
+              "id": 0,
+              "name": "百度云"
+            },
+            {
+              "id": 1,
+              "name": "腾讯云"
+            },
+            {
+              "id": 2,
+              "name": "中通云"
+            }
+          ]
+        },
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 300,
+      "confId": 60,
+      "nodeId": "PunGE1",
+      "nodeType": 4,
+      "nodeProperty": 5,
+      "nodePropertyName": "指定人员",
+      "nodeFrom": "zrgGE1",
+      "nodeFroms": "zrgGE1",
+      "prevId": [
+        "zrgGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "蔡六审批",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:57",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:57",
+      "nodeTo": [
+        "LuLbT"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": [
+          6
+        ],
+        "emplList": [
+          {
+            "id": 6,
+            "name": "测试人员6"
+          }
+        ],
+        "signType": 1,
+        "conditionsConf": null,
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 301,
+      "confId": 60,
+      "nodeId": "zmgGE1",
+      "nodeType": 3,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "GegGE1",
+      "nodeFroms": "GegGE1",
+      "prevId": [
+        "GegGE1"
+      ],
       "batchStatus": 0,
       "approvalStandard": 2,
       "nodeName": "条件2",
@@ -244,11 +582,409 @@
       "remark": "",
       "isDel": 0,
       "createUser": "defaultUser",
-      "createTime": "2022-05-13 10:52:44",
+      "createTime": "2022-05-14 09:15:58",
       "updateUser": "",
-      "updateTime": "2022-05-13 10:52:43",
+      "updateTime": "2022-05-14 09:15:57",
       "nodeTo": [
-        "5UMcT"
+        "LuLbT"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": null,
+        "emplList": null,
+        "signType": null,
+        "conditionsConf": {
+          "conditionParamTypes": null,
+          "isDefault": 1,
+          "sort": 1,
+          "templateMarkList": null,
+          "jobLevelVo": null,
+          "accountType": null,
+          "accountTypeList": null
+        },
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 302,
+      "confId": 60,
+      "nodeId": "vnNGE1",
+      "nodeType": 3,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "PpNGE1",
+      "nodeFroms": "PpNGE1",
+      "prevId": [
+        "PpNGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "条件1",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:58",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:58",
+      "nodeTo": [
+        "eLXGE1"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": null,
+        "emplList": null,
+        "signType": null,
+        "conditionsConf": {
+          "conditionParamTypes": [
+            4
+          ],
+          "isDefault": 0,
+          "sort": 0,
+          "templateMarkList": null,
+          "jobLevelVo": null,
+          "accountType": [
+            1
+          ],
+          "accountTypeList": [
+            {
+              "id": 0,
+              "name": "百度云"
+            },
+            {
+              "id": 1,
+              "name": "腾讯云"
+            },
+            {
+              "id": 2,
+              "name": "中通云"
+            }
+          ]
+        },
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 303,
+      "confId": 60,
+      "nodeId": "eLXGE1",
+      "nodeType": 4,
+      "nodeProperty": 5,
+      "nodePropertyName": "指定人员",
+      "nodeFrom": "vnNGE1",
+      "nodeFroms": "vnNGE1",
+      "prevId": [
+        "vnNGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "王五审批",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:59",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:58",
+      "nodeTo": [
+        "GegGE1"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": [
+          5
+        ],
+        "emplList": [
+          {
+            "id": 5,
+            "name": "测试人员5"
+          }
+        ],
+        "signType": 1,
+        "conditionsConf": null,
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 304,
+      "confId": 60,
+      "nodeId": "EoSGE1",
+      "nodeType": 3,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "PpNGE1",
+      "nodeFroms": "PpNGE1",
+      "prevId": [
+        "PpNGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "条件",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:59",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:59",
+      "nodeTo": [
+        "GegGE1"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": null,
+        "emplList": null,
+        "signType": null,
+        "conditionsConf": {
+          "conditionParamTypes": [
+            4
+          ],
+          "isDefault": 0,
+          "sort": 1,
+          "templateMarkList": null,
+          "jobLevelVo": null,
+          "accountType": [
+            2
+          ],
+          "accountTypeList": [
+            {
+              "id": 0,
+              "name": "百度云"
+            },
+            {
+              "id": 1,
+              "name": "腾讯云"
+            },
+            {
+              "id": 2,
+              "name": "中通云"
+            }
+          ]
+        },
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 305,
+      "confId": 60,
+      "nodeId": "InNGE1",
+      "nodeType": 3,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "PpNGE1",
+      "nodeFroms": "PpNGE1",
+      "prevId": [
+        "PpNGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "条件2",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:15:59",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:15:59",
+      "nodeTo": [
+        "GegGE1"
+      ],
+      "property": {
+        "loopEndType": null,
+        "loopNumberPlies": null,
+        "loopEndGrade": null,
+        "loopEndPersonList": null,
+        "loopEndPersonObjList": null,
+        "assignLevelType": null,
+        "assignLevelGrade": null,
+        "hrbpConfType": null,
+        "roleIds": null,
+        "roleList": null,
+        "emplIds": null,
+        "emplList": null,
+        "signType": null,
+        "conditionsConf": {
+          "conditionParamTypes": null,
+          "isDefault": 1,
+          "sort": 2,
+          "templateMarkList": null,
+          "jobLevelVo": null,
+          "accountType": null,
+          "accountTypeList": null
+        },
+        "configurationTableType": null,
+        "tableFieldType": null,
+        "isMultiPeople": null,
+        "noparticipatingStaffIds": null,
+        "noparticipatingStaffs": null,
+        "functionId": null,
+        "functionName": null,
+        "afterSignUpWay": null,
+        "signUpType": null,
+        "nodeMark": null
+      },
+      "params": null,
+      "buttons": {
+        "startPage": [],
+        "approvalPage": [
+          2
+        ],
+        "viewPage": null
+      },
+      "templateVos": null,
+      "approveRemindVo": null,
+      "formCode": "DSFZH_WMA"
+    },
+    {
+      "id": 306,
+      "confId": 60,
+      "nodeId": "bwIGE1",
+      "nodeType": 3,
+      "nodeProperty": 1,
+      "nodePropertyName": null,
+      "nodeFrom": "G1GGE1",
+      "nodeFroms": "G1GGE1",
+      "prevId": [
+        "G1GGE1"
+      ],
+      "batchStatus": 0,
+      "approvalStandard": 2,
+      "nodeName": "条件2",
+      "annotation": null,
+      "isDeduplication": 0,
+      "isSignUp": 0,
+      "remark": "",
+      "isDel": 0,
+      "createUser": "defaultUser",
+      "createTime": "2022-05-14 09:16:00",
+      "updateUser": "",
+      "updateTime": "2022-05-14 09:16:00",
+      "nodeTo": [
+        "LuLbT"
       ],
       "property": {
         "loopEndType": null,

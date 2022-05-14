@@ -113,12 +113,13 @@ export default {
     getTestData().then(c=> {
       console.log('11111**************111');
       console.log('--api----data===',JSON.stringify(c.data.length));
-      this.nodeDate = FormatDisplayUtils.depthConverterToTree(c.data); 
+      this.nodeDate = FormatDisplayUtils.depthConverterToTree(c.data);
+       GET_MOCK_CONF().then(data => {
+        data.processData = this.nodeDate
+        this.mockData = data
+      });
     });
-    GET_MOCK_CONF().then(data => {
-      data.processData = this.nodeDate
-      this.mockData = data
-    });
+   
   },
   methods: {
     changeSteps(item) {
