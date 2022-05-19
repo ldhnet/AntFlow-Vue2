@@ -2,6 +2,28 @@ const isEmpty = data => data === null || data === undefined || data === ''
 const isEmptyArray = data => Array.isArray( data ) ? data.length === 0 : true
 
 export class FormatUtils {
+    
+    /**
+     * 对基础设置,高级设置等设置页内容进行格式化
+     * @param params
+     */
+     static formatSettings(param,treeList){
+        let advancedSetting = param.advancedSetting;
+        let basicSetting=param.basicSetting;
+        let deduplicationType=basicSetting.deduplicationType;//2去重,1不去重
+        let bpmnName=basicSetting.flowName;
+        let formCode="DSFZH_WMA";//测试先写死,后面需要添加字段
+        let remark=basicSetting.flowRemark;
+        let finalObj={
+            bpmnName,formCode,deduplicationType,remark,nodes:treeList
+        }
+
+        console.log("final object最终对象"+JSON.stringify(finalObj));
+
+        console.log("formatSettings-2", JSON.stringify(treeList));
+        return finalObj;
+    }
+
      /**
    * 解析Node Tree Data 数据
    * @param { Object } treeData - 节点数据
@@ -20,8 +42,8 @@ export class FormatUtils {
         {
             this.depthMapConditionNodes(treeData.conditionNodes,arrList);
         }  
-        console.log('arrList-length-2',arrList.length);
-        console.log('arrList-2',JSON.stringify(arrList)); 
+        // console.log('arrList-length-2',arrList.length);
+        // console.log('arrList-2',JSON.stringify(arrList)); 
         return arrList
     }
 

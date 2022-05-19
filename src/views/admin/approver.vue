@@ -150,8 +150,10 @@ export default {
       })
     },
     formatProcessData(param){
-      console.log('开始Format');
-      FormatUtils.depthMapTree(param.processData);
+      console.log('开始Format'); 
+      let treeList = FormatUtils.depthMapTree(param.processData);
+      const formattedSettings = FormatUtils.formatSettings(param, treeList);
+      return formattedSettings;
     },
     
     sendToServer(param){

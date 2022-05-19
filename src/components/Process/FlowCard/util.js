@@ -268,13 +268,13 @@ export class NodeUtils {
             updateChildNodeFrom(prevNode, nodeData)   
             console.log('delete=====processData==1111==',JSON.stringify(processData));       
           } else { 
-            //方案一全删节点
-            v1_updateChildNodeForGateway(prevNode,processData) 
+            // //方案一全删节点
+            // v1_updateChildNodeForGateway(prevNode,processData) 
 
-            ////方案二 保留一支分支
-            // let anotherCon = cons[+( !index )]
-            // delete prevNode.conditionNodes
-            // V2_updateChildNodeFrom(prevNode,anotherCon)
+            //方案二 保留一支分支
+            let anotherCon = cons[+( !index )]
+            delete prevNode.conditionNodes
+            V2_updateChildNodeFrom(prevNode,anotherCon)
 
             console.log('delete=====processData==2222==',JSON.stringify(processData));
             return
