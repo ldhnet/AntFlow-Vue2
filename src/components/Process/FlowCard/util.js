@@ -101,7 +101,7 @@ export class NodeUtils {
   /**
    * 获取指定节点 下的最后一级节点
    * @param { String } nodeData - 指定节点 
-   * @returns { Object } 最后一级节点数组
+   * @returns { Array } 最后一级节点数组
    */
   static getDeptNodeInfo ( nodeData  ) { 
     let getdeptNodesArray=[]
@@ -169,7 +169,7 @@ export class NodeUtils {
       concatPrevAndChild(prev, delNode);
     }
 
-    let updateChildNodeForGateway = ( delGatewayNode, processData ) => {
+    let v1_updateChildNodeForGateway = ( delGatewayNode, processData ) => {
       let prevForGateway =  this.getPreviousNode( delGatewayNode.prevId, processData )
       let allChildNode= this.getDeptNodeInfo(delGatewayNode)    
       prevForGateway.nodeTo = allChildNode[0].nodeTo //修改原父节点 的 nodeTo 数据  
@@ -220,9 +220,44 @@ export class NodeUtils {
       {
         delete prev.childNode
       }
-      //console.log('delete=====processData====',JSON.stringify(processData));
     }
-    
+    let V2_updateChildNodeFrom = ( prevNode, anotherCon ) => {
+      if ( prevNode.childNode ) {
+        let endNode = anotherCon
+        while ( endNode.childNode ) {
+          endNode = endNode.childNode
+        }
+        endNode.childNode = prevNode.childNode
+        endNode.childNode.prevId = endNode.nodeId
+        if (endNode.childNode && endNode.childNode.type === 'gateway') {
+
+          let lastChildNodes= this.getDeptNodeInfo(endNode.childNode)    
+          endNode.childNode.nodeFrom=lastChildNodes
+        }else
+        {
+          endNode.childNode.nodeFrom = [endNode.nodeId]
+        }
+      }
+      V2_concatChild( prevNode, anotherCon )
+    }
+    let V2_concatChild = ( deletePrev, delNode ) => {
+      if(isEmpty(delNode.childNode)) return
+      let prev = this.getPreviousNode( deletePrev.prevId, processData )  
+      prev.childNode = delNode.childNode
+      prev.childNode.prevId = prev.nodeId
+
+      if (prev.type === 'gateway') {        
+        let lastChildNodes= this.getDeptNodeInfo(prev)   
+
+        lastChildNodes = lastChildNodes.map(c=> c.nodeTo = [prev.childNode.nodeId]) //改变原父节点 nodeTo 数据           
+        prev.childNode.nodeFrom = lastChildNodes.map(c=> { return c.nodeId})
+      }else
+      {
+        prev.nodeTo=[prev.childNode.nodeId]
+        prev.childNode.nodeFrom = [prev.nodeId]
+      }
+    }
+
     if ( checkEmpty && prevNode.type === 'gateway' ) {
         if ( this.isConditionNode( nodeData ) ) {
           let cons = prevNode.conditionNodes
@@ -230,24 +265,33 @@ export class NodeUtils {
           if ( cons.length > 2 ) {
             //修改子节点的 nodeFrom 数据
             cons.splice( index, 1 ) 
-            updateChildNodeFrom(prevNode, nodeData)          
-          } else {
-            //let anotherCon = cons[+( !index )]  
-            updateChildNodeForGateway(prevNode,processData)
+            updateChildNodeFrom(prevNode, nodeData)   
+            console.log('delete=====processData==1111==',JSON.stringify(processData));       
+          } else { 
+            //方案一全删节点
+            v1_updateChildNodeForGateway(prevNode,processData) 
+
+            ////方案二 保留一支分支
+            // let anotherCon = cons[+( !index )]
+            // delete prevNode.conditionNodes
+            // V2_updateChildNodeFrom(prevNode,anotherCon)
+
+            console.log('delete=====processData==2222==',JSON.stringify(processData));
             return
           }
           // 重新编排优先级
           cons.forEach( ( c, i ) => c.properties.priority = i )
+          console.log('delete=====processData==3333==',JSON.stringify(processData));
           return
         }
         else
         { 
            updateGatewayChildNode(prevNode,nodeData) 
+           console.log('delete=====processData==4444==',JSON.stringify(processData));
            return
         }
     }
-    concatChild( prevNode, nodeData )
-    //console.log('delete=====processData====',JSON.stringify(processData));
+    concatChild( prevNode, nodeData ) 
   }
   /**
    * 添加审计节点（普通节点 approver）
