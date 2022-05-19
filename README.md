@@ -1,6 +1,9 @@
 # 仿钉钉后台审批流程
-> 渣新出品，不曾想放到GitHub上居然有人给了Star，人生第一次，分享出来给大家，虽然多半没什么用，供大家一乐也好。垃圾代码，还望轻喷。
 
+[预览入口](http://110.42.176.117:8088/#/approver)
+
+[GitHub仓库](https://github.com/ldhnet/AntFlow)
+ 
 基于JakHuang大佬的[form-generator](https://github.com/JakHuang/form-generator)的，仿钉钉后台审批流程创建界面
 
 
@@ -41,15 +44,12 @@
 
 ## 界面预览
 ![YL5ip8.png](https://s1.ax1x.com/2020/05/22/YL5ip8.png)
-![YL5AXQ.png](https://s1.ax1x.com/2020/05/22/YL5AXQ.png)
 ![YL5k6g.png](https://s1.ax1x.com/2020/05/22/YL5k6g.png)
 ![YL5Cff.png](https://s1.ax1x.com/2020/05/22/YL5Cff.png)
 ![YL5F1S.png](https://s1.ax1x.com/2020/05/22/YL5F1S.png)
 ![YL5Z0s.png](https://s1.ax1x.com/2020/05/22/YL5Z0s.png)
 ![YL5Vmj.png](https://s1.ax1x.com/2020/05/22/YL5Vmj.png)
-
-## 郑重感谢
-非常感谢JakHuang的[form-generator](https://github.com/JakHuang/form-generator)为我解决了很多问题，也从中学习到了很多。再者就是我fork`form-generator`版本和JakHuang现在的版本也有很大的区别，感兴趣的童鞋可以去JakHuang那儿看看。
+ 
 
 
 
