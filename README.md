@@ -5,7 +5,22 @@
 [GitHub仓库](https://github.com/ldhnet/AntFlow)
  
 基于JakHuang大佬的[form-generator](https://github.com/JakHuang/form-generator)的，仿钉钉后台审批流程创建界面
+## 安装使用
+ 
+- 安装依赖
+yarn install | npm install
 
+- 运行
+yarn serve | npm run serve
+
+- 打包
+yarn build  | npm build
+
+- 本地预览
+yarn preview  | npm preview
+
+- 打包/预览 
+yarn build:preview | npm build:preview
 
 ## 主要功能
 1. 表单配置(form-generator)
