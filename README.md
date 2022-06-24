@@ -14,13 +14,13 @@ yarn install | npm install
 yarn serve | npm run serve
 
 - 打包
-yarn build  | npm build
+yarn build  | npm run build
 
 - 本地预览
-yarn preview  | npm preview
+yarn preview 
 
 - 打包/预览 
-yarn build:preview | npm build:preview
+yarn build:preview 
 
 ## 主要功能
 1. 表单配置(form-generator)
