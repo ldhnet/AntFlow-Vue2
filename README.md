@@ -1,10 +1,22 @@
 # 仿钉钉后台审批流程
+<p align="center" style="margin-bottom: 0 !important">
+	<img alt="logo" src="https://gitee.com/ldhnet/ant-flow/raw/master/public/images/logo.png"  width = "80px"; height= "80px";>
+</p>
+<h1 align="center" style="margin: 10px 10px; font-weight: bold;margin-top: 0 !important">Ant-Flow-Vue2</h1>
+<h4 style="border-top: solid #ACC0D8 1px;"></h4>
+<h4 align="center">Ant-Flow-Vue2是基于Vue2 的前端工作流配置新模式 </h4>
+<h4 align="center" style="margin: 0px 0px 30px 10px; ">
+后端自主研发基于SpringBoot + Activiti 开发的轻量级工作流框架</h4>
 
-[预览入口](http://117.72.70.166/ant-flow/dist/#/)
+- 特此声明 完全开源
 
-[GitHub仓库](https://github.com/ldhnet/AntFlow)
+- Ant-Flow Vue3 版本[预览入口](http://117.72.70.166/ant-flow/dist/#/)
+
+- Ant-Flow Vue3 版本[Gitee仓库](https://gitee.com/ldhnet/ant-flow)
  
+
 基于JakHuang大佬的[form-generator](https://github.com/JakHuang/form-generator)的，仿钉钉后台审批流程创建界面
+
 ## 安装使用
  
 - 安装依赖
