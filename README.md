@@ -8,11 +8,13 @@
 <h4 align="center" style="margin: 0px 0px 30px 10px; ">
 后端自主研发基于SpringBoot + Activiti 开发的轻量级工作流框架</h4>
 
-- 特此声明 完全开源
+- 特此声明 完全开源，开源不易，点个星星支持一下。
 
 - Ant-Flow Vue3 版本[预览入口](http://117.72.70.166/ant-flow/dist/#/)
 
 - Ant-Flow Vue3 版本[Gitee仓库](https://gitee.com/ldhnet/ant-flow)
+
+- QQ技术交流群（972107977）期待您的加入
  
 
 基于JakHuang大佬的[form-generator](https://github.com/JakHuang/form-generator)的，仿钉钉后台审批流程创建界面
