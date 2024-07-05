@@ -1,10 +1,10 @@
 # 仿钉钉后台审批流程
 <p align="center" style="margin-bottom: 0 !important">
-	<img alt="logo" src="https://gitee.com/ldhnet/ant-flow/raw/master/public/images/logo.png"  width = "80px"; height= "80px";>
+	<img alt="logo" src="https://gitee.com/ldhnet/AntFlow-Vue3/raw/master/public/images/logo.png"  width = "80px"; height= "80px";>
 </p>
-<h1 align="center" style="margin: 10px 10px; font-weight: bold;margin-top: 0 !important">Ant-Flow-Vue2</h1>
+<h1 align="center" style="margin: 10px 10px; font-weight: bold;margin-top: 0 !important">AntFlow-Vue2</h1>
 <h4 style="border-top: solid #ACC0D8 1px;"></h4>
-<h4 align="center">Ant-Flow-Vue2是基于Vue2 的前端工作流配置新模式 </h4>
+<h4 align="center">AntFlow-Vue2是基于Vue2 的前端工作流配置新模式 </h4>
 <h4 align="center" style="margin: 0px 0px 30px 10px; ">
 后端自主研发基于SpringBoot + Activiti 开发的轻量级工作流框架</h4>
 
@@ -12,7 +12,7 @@
 
 - Ant-Flow Vue3 版本[预览入口](http://117.72.70.166/ant-flow/dist/#/)
 
-- Ant-Flow Vue3 版本[Gitee仓库](https://gitee.com/ldhnet/ant-flow)
+- Ant-Flow Vue3 版本[Gitee仓库](https://gitee.com/ldhnet/AntFlow-Vue3)
 
 - QQ技术交流群（972107977）期待您的加入
  
